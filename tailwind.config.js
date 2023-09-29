@@ -8,7 +8,16 @@ export default {
     "./src/app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {  
+      },
+      fontFamily: {
+      },
+      fontSize: {
+      },
+      width: {
+      },
+    },
   },
   plugins: [],
 }
