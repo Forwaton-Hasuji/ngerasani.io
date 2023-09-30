@@ -10,15 +10,15 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {},
-    },
+      autoprefixer: {}
+    }
   },
   imports: {
     dirs: ['stores', 'stores/**']
   },
   modules: [
     '@vueuse/nuxt',
-    '@pinia/nuxt',
+    '@pinia/nuxt'
   ],
   pinia: {
     autoImports: [
