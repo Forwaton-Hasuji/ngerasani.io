@@ -18,7 +18,8 @@ export default defineNuxtConfig({
   },
   modules: [
     '@vueuse/nuxt',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxtjs/device'
   ],
   pinia: {
     autoImports: [
@@ -28,5 +29,6 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['primevue']
-  }
+  },
+  ssr: false
 })

@@ -5,7 +5,8 @@ export default {
     './src/layouts/**/*.vue',
     './src/pages/**/*.vue',
     './src/plugins/**/*.{js,ts}',
-    './src/app.vue'
+    './src/app.vue',
+    './src/views/**/**/*.vue'
   ],
   theme: {
     extend: {
@@ -14,7 +15,9 @@ export default {
         secondary: '#1D1E33',
         darkSecondary: '#19182A',
         darkPrimary: '#12111E',
-        neutral: '#242333'
+        neutral: '#242333',
+        light: '#D7D8DA',
+        red: '#F51A0F'
       },
       fontFamily: {
       },
