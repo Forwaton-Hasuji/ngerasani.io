@@ -3,14 +3,12 @@
     <h1>HomePage</h1>
     <Button label="Increment" icon="pi pi-check" @click="increment" />
     <span>{{ count }}</span>
-    <LiquidLoading />
   </section>
 </template>
 
 <script lang="ts" setup>
 import { storeToRefs } from 'pinia'
 import { useCounterStore } from '~/stores'
-import LiquidLoading from '~/components/LiquidLoading.vue'
 
 const store = useCounterStore()
 
