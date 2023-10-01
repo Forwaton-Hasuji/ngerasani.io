@@ -34,5 +34,6 @@
     "pinia": "^2.1.6",
     "primeicons": "^6.0.1",
     "primevue": "^3.35.0"
-  }
+  },
+  "version": "0.0.0"
 }
