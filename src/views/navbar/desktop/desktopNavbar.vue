@@ -1,12 +1,12 @@
 <template>
-  <div class="flex items-center absolute -right-12 top-[40vh] hover:right-20">
+  <div class="z-50 flex items-center fixed -right-12 top-[40vh] hover:right-20">
     <div class="w-32 h-fit bg-darkPrimary text-light flex flex-col-reverse items-center justify-center rotate-90">
       <img :src="useAsset('icons/arrow-down.png')" alt="" width="15" class="light-icon">
       <p class="text-xs">
         Navigation Bar
       </p>
     </div>
-    <div class="w-32 h-fit flex flex-col gap-4 absolute left-20">
+    <div class="w-32 h-64 flex flex-col gap-4 absolute left-20 bg-darkPrimary">
       <DesktopNavbarButton
         v-for="(item,i) in navbarList"
         :key="i"
@@ -25,3 +25,8 @@ import DesktopNavbarButton from './desktopNavbarButton.vue'
 const route = useRoute()
 
 </script>
+<style>
+.hide-scrollbar{
+  scrollbar-width: none;
+}
+</style>

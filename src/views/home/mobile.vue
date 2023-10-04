@@ -35,6 +35,7 @@
   </div>
 </template>
 <script setup lang="ts">
+import personList from './dummy-person'
 const advanceSearchIcon = useAsset('icons/advance-search.png')
 const selectedTag = ref('Hot')
 
@@ -69,51 +70,4 @@ const tagList = [
   }
 ]
 
-const personList = [
-  {
-    name: 'Eca Aura',
-    age: 20,
-    rating: 4.9,
-    ratingCount: 51300,
-    job: 'Entertainer / Host',
-    gender: 'Female',
-    photoPath: 'images/dummy-photo.jpg'
-  },
-  {
-    name: 'Eca Aura',
-    age: 20,
-    rating: 4.9,
-    ratingCount: 51300,
-    job: 'Entertainer / Host',
-    gender: 'Female',
-    photoPath: 'images/dummy-photo.jpg'
-  },
-  {
-    name: 'Eca Aura',
-    age: 20,
-    rating: 4.9,
-    ratingCount: 51300,
-    job: 'Entertainer / Host',
-    gender: 'Female',
-    photoPath: 'images/dummy-photo.jpg'
-  },
-  {
-    name: 'Eca Aura',
-    age: 20,
-    rating: 4.9,
-    ratingCount: 51300,
-    job: 'Entertainer / Host',
-    gender: 'Female',
-    photoPath: 'images/dummy-photo.jpg'
-  },
-  {
-    name: 'Eca Aura',
-    age: 20,
-    rating: 4.9,
-    ratingCount: 51300,
-    job: 'Entertainer / Host',
-    gender: 'Female',
-    photoPath: 'images/dummy-photo.jpg'
-  }
-]
 </script>

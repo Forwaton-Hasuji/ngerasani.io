@@ -8,7 +8,7 @@
     </div>
   </header>
   <main>
-    <div :class="`w-full bg-primary relative overflow-x-hidden ${$device.isMobile ? 'overflow-scroll h-[78vh]' : 'h-[90vh]'}`">
+    <div :class="`w-full bg-primary relative overflow-x-hidden no-scrollbar ${$device.isMobile ? 'overflow-scroll h-[78vh]' : 'h-[90vh]'}`">
       <slot />
       <DesktopNavbar v-if="!$device.isMobile" />
     </div>
