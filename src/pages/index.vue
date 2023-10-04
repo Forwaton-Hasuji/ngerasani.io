@@ -14,4 +14,8 @@ const store = useCounterStore()
 
 const { count } = storeToRefs(store)
 const { increment } = store
+
+definePageMeta({
+  layout: 'main'
+})
 </script>

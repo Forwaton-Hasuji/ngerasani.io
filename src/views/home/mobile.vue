@@ -4,7 +4,6 @@
       <SearchBox />
       <div class="bg-secondary min-w-[48px] h-12 rounded-lg flex items-center justify-center">
         <img :src="advanceSearchIcon" alt="" width="30" class="light-icon">
-        <div class="bg-red w-2 h-2 rounded-full absolute top-10 right-7" />
       </div>
     </div>
 
