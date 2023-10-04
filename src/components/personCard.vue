@@ -63,8 +63,8 @@ defineProps({
     default: ''
   },
   age: {
-    type: String,
-    default: ''
+    type: Number,
+    default: 0
   },
   gender: {
     type: String,
