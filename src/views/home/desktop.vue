@@ -1,9 +1,29 @@
 <template>
   <div class="px-6 py-2 flex flex-col items-center gap-4">
-    <div class="w-80 flex gap-4">
-      <SearchBox />
-      <div class="bg-secondary min-w-[48px] h-12 rounded-lg flex items-center justify-center">
-        <img :src="advanceSearchIcon" alt="" width="30" class="light-icon">
+    <div :class="`flex gap-4 w-full ${!isShowAdvFilter ? 'flex items-center' : ''}`">
+      <div class="min-w-fit flex gap-4">
+        <SearchBox />
+        <div
+          class="bg-secondary min-w-[48px] h-12 rounded-lg flex items-center justify-center"
+          @click="toogleAdvanceFilter"
+        >
+          <img v-if="isShowAdvFilter" :src="useAsset('icons/close.png')" alt="" width="30" class="light-icon">
+          <img v-else :src="useAsset('icons/advance-search.png')" alt="" width="30" class="light-icon">
+        </div>
+      </div>
+      <div v-if="isShowAdvFilter" class="w-full">
+        <AdvanceFilter />
+      </div>
+      <div v-else class="w-full overflow-x- flex gap-4">
+        <div
+          v-for="(tag,i) in tagList"
+          :key="i"
+          :class="`${selectedTag === tag.value ? 'bg-red' : 'bg-secondary'}
+          rounded-lg min-w-fit h-fit px-2 font-bold text-light`"
+          @click="() => selectedTag = tag.value"
+        >
+          {{ tag.value }}
+        </div>
       </div>
     </div>
     <div class="grid grid-cols-6 gap-4">
@@ -23,6 +43,43 @@
 </template>
 <script setup lang="ts">
 import personList from './dummy-person'
-const advanceSearchIcon = useAsset('icons/advance-search.png')
+import AdvanceFilter from '~/components/advanceFilter.vue'
+const isShowAdvFilter = ref(false)
+const selectedTag = ref('Hot')
+
+const toogleAdvanceFilter = () => {
+  isShowAdvFilter.value = !isShowAdvFilter.value
+}
+
+const tagList = [
+  {
+    value: 'Hot',
+    id: 1
+  },
+  {
+    value: 'Alpha',
+    id: 2
+  },
+  {
+    value: 'Gen-Z',
+    id: 3
+  },
+  {
+    value: 'Boomer',
+    id: 4
+  },
+  {
+    value: 'Mapan',
+    id: 5
+  },
+  {
+    value: 'Idaman',
+    id: 6
+  },
+  {
+    value: 'Crazy Rich',
+    id: 7
+  }
+]
 
 </script>
