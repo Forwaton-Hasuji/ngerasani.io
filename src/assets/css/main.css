@@ -16,3 +16,9 @@
 		}
 	}
 }
+
+:root {
+	--slider-connect-bg: #3F4169;
+	--slider-tooltip-bg: #3F4169;
+	--slider-handle-ring-color: white;
+}
