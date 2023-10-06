@@ -37,6 +37,7 @@
         :rating="person.rating"
         :rating-count="person.ratingCount"
         :photo-path="person.photoPath"
+        :profile-id="person.profileId"
       />
     </div>
   </div>
@@ -48,7 +49,6 @@ const selectedTag = ref('Hot')
 const isShowAdvFilter = ref(false)
 
 const toogleAdvanceFilter = () => {
-  console.log('haha')
   isShowAdvFilter.value = !isShowAdvFilter.value
 }
 

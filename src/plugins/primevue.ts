@@ -6,6 +6,7 @@ import ToastService from 'primevue/toastservice'
 import Dialog from 'primevue/dialog'
 import '@/assets/css/main.css'
 import Dropdown from 'primevue/dropdown'
+import Textarea from 'primevue/textarea'
 
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.use(PrimeVue, { ripple: true, unstyled: false })
@@ -16,4 +17,5 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.component('Dialog', Dialog)
   // other components that you need
   nuxtApp.vueApp.component('Dropdown', Dropdown)
+  nuxtApp.vueApp.component('Textarea', Textarea)
 })

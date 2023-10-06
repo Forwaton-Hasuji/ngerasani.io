@@ -1,5 +1,8 @@
 <template>
-  <div class="w-full h-[300px] text-light flex flex-col gap-2 items-center">
+  <div
+    class="w-full h-[300px] text-light flex flex-col gap-2 items-center"
+    @click="goToDetail"
+  >
     <div class="flex rounded-lg w-full h-[240px] overflow-hidden relative">
       <img
         :src="useAsset(photoPath)"
@@ -53,7 +56,7 @@
   </div>
 </template>
 <script setup lang="ts">
-defineProps({
+const props = defineProps({
   name: {
     type: String,
     default: ''
@@ -81,7 +84,16 @@ defineProps({
   ratingCount: {
     type: Number,
     default: 0
+  },
+  profileId: {
+    type: Number,
+    default: 0
   }
 })
+
+const router = useRouter()
+const goToDetail = () => {
+  router.push('/person/' + props.profileId)
+}
 
 </script>
