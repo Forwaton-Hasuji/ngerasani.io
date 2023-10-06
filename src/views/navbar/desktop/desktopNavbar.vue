@@ -13,7 +13,7 @@
         :label="item.label"
         :icon="item.iconUrl"
         :path="item.path"
-        :is-selected="route.path.match(item.path)"
+        :is-selected="!!route.path.match(item.path)"
       />
     </div>
   </div>

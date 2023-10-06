@@ -17,7 +17,10 @@ export default {
         darkPrimary: '#12111E',
         neutral: '#242333',
         light: '#D7D8DA',
-        red: '#F51A0F'
+        red: '#F51A0F',
+        lightPurple: '#3F4169',
+        yellowStar: '#FFC107',
+        medPurple: '#141F39'
       },
       fontFamily: {
       },

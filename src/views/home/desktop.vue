@@ -37,6 +37,7 @@
         :rating="person.rating"
         :rating-count="person.ratingCount"
         :photo-path="person.photoPath"
+        :profile-id="person.profileId"
       />
     </div>
   </div>
