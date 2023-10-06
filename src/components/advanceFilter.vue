@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full h-fit text-light flex flex-row gap-12 mt-8">
-    <div class="w-full flex flex-col gap-8">
+  <div class="w-full h-fit text-light gap-12 mt-8">
+    <div :class="`grid ${isMobile ? 'grid-rows-4 mb-8' : 'grid-rows-2'} grid-flow-col gap-8`">
       <MultiSlider
         label="Age"
         :min-value="1"
@@ -8,6 +8,7 @@
         :current-value="age"
         tooltip-suffix=" yo"
         :merge-tooltips-diff="20"
+        :class="isMobile ? '' : 'col-span-4'"
         @valueUpdated="newVal => age = newVal"
       />
       <MultiSlider
@@ -19,10 +20,9 @@
         tooltip-prefix="Rp."
         tooltip-suffix=" /month"
         :merge-tooltips-diff="52000000"
+        :class="isMobile ? '' : 'col-span-4'"
         @valueUpdated="newVal => income = newVal"
       />
-    </div>
-    <div class="w-full flex flex-col gap-6">
       <Dropdown
         label="Gender"
         :use-clear="true"
@@ -40,6 +40,13 @@
 </template>
 <script setup lang="ts">
 import MultiSlider from '@/components/multiSlider.vue'
+
+defineProps({
+  isMobile: {
+    type: Boolean,
+    default: false
+  }
+})
 
 const gender = ref('male')
 const age = ref([1, 130])
