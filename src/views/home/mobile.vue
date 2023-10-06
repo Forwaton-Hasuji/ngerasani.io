@@ -2,12 +2,19 @@
   <div class="px-6 py-2">
     <div class="w-full flex gap-4">
       <SearchBox />
-      <div class="bg-secondary min-w-[48px] h-12 rounded-lg flex items-center justify-center">
-        <img :src="advanceSearchIcon" alt="" width="30" class="light-icon">
+      <div
+        class="bg-secondary min-w-[48px] h-12 rounded-lg flex items-center justify-center"
+        @click="toogleAdvanceFilter"
+      >
+        <img v-if="isShowAdvFilter" :src="useAsset('icons/close.png')" alt="" width="30" class="light-icon">
+        <img v-else :src="useAsset('icons/advance-search.png')" alt="" width="30" class="light-icon">
       </div>
     </div>
 
-    <div class="flex mt-4 overflow-x-auto space-x-3 w-full h-10">
+    <div v-if="isShowAdvFilter">
+      <AdvanceFilter :is-mobile="true" />
+    </div>
+    <div v-else class="flex mt-4 overflow-x-auto space-x-3 w-full h-10">
       <div
         v-for="(tag,i) in tagList"
         :key="i"
@@ -36,8 +43,14 @@
 </template>
 <script setup lang="ts">
 import personList from './dummy-person'
-const advanceSearchIcon = useAsset('icons/advance-search.png')
+import AdvanceFilter from '@/components/advanceFilter.vue'
 const selectedTag = ref('Hot')
+const isShowAdvFilter = ref(false)
+
+const toogleAdvanceFilter = () => {
+  console.log('haha')
+  isShowAdvFilter.value = !isShowAdvFilter.value
+}
 
 const tagList = [
   {
