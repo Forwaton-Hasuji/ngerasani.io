@@ -16,6 +16,7 @@
   </div>
 </template>
 <script setup lang="ts">
+// eslint-disable-next-line import/default
 import Slider from '@vueform/slider'
 
 const props = defineProps({

@@ -28,7 +28,7 @@ export default defineNuxtConfig({
     ]
   },
   build: {
-    transpile: ['primevue']
+    transpile: ['primevue', '@vueform/slider']
   },
   ssr: false
 })
