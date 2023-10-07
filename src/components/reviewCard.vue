@@ -1,17 +1,17 @@
 <template>
   <div class="w-full flex flex-col">
     <div class="flex items-center gap-4">
-      <div class="rounded-full w-10 h-10 overflow-hidden">
+      <div :class="`rounded-full ${isMobile ? 'w-10 h-10' : 'w-12 h-12'} overflow-hidden`">
         <img
           :src="useAsset(photoUrl)"
           class="image-full w-full h-full object-cover"
         >
       </div>
       <div class="flex flex-col -gap-2">
-        <p class="text-sm">
+        <p :class="isMobile ? 'text-sm' : ''">
           {{ name }}
         </p>
-        <p class="text-[10px] font-extralight">
+        <p :class="isMobile ? 'text-[10px] font-extralight' : 'text-sm'">
           {{ toLongDate(createdAt) }}
         </p>
         <div class="flex gap-2">
@@ -20,7 +20,7 @@
       </div>
     </div>
 
-    <div class="text-xs ml-4 mt-2">
+    <div :class="isMobile ? 'text-xs ml-4 mt-2' : 'ml-4 mt-2'">
       "{{ comment }}"
     </div>
   </div>
@@ -48,6 +48,10 @@ defineProps({
   comment: {
     type: String,
     default: ''
+  },
+  isMobile: {
+    type: Boolean,
+    default: true
   }
 })
 </script>
