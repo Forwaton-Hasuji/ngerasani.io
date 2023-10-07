@@ -27,7 +27,8 @@ export const rating = {
   star2: 123,
   star3: 1128,
   star4: 3184,
-  star5: 4814
+  star5: 4814,
+  total: 1023134
 }
 
 export const reviews = [
