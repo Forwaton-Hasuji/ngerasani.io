@@ -20,7 +20,8 @@ export default {
         red: '#F51A0F',
         lightPurple: '#3F4169',
         yellowStar: '#FFC107',
-        medPurple: '#141F39'
+        medPurple: '#141F39',
+        goldenYellow: '#DFCD04'
       },
       fontFamily: {
       },
