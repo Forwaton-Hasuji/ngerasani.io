@@ -20,7 +20,7 @@
           <InputText id="password" v-model="password" class="h-8 text-black px-4" />
           <label for="password">Password</label>
         </span>
-        <Button label="Login" class="px-8 py-2 bg-primary" />
+        <Button label="Login" class="px-8 py-2 bg-primary" @click="loginSubmit" />
         <Button class="px-4 py-1 bg-light text-black">
           <img :src="useAsset('icons/google.png')" width="40">
           <p>Log in with Google</p>
@@ -41,6 +41,9 @@ const password = ref('')
 const router = useRouter()
 const goToRegister = () => {
   router.push('/register')
+}
+const loginSubmit = () => {
+  router.push('/home')
 }
 
 </script>
